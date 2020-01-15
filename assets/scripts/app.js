@@ -20,10 +20,10 @@ const renderNewMovieElement = (title, imageUrl, rating) => {
   const newMovieElement = document.createElement('li');
   newMovieElement.className = 'movie-element';
   newMovieElement.innerHTML = `
-    <div classname="movie-element__image">
-      <img src="${imageUrl}" alt="${title}"
+    <div class="movie-element__image">
+      <img src="${imageUrl}" alt="${title}">
     </div>
-    <div classname="movie-element__info">
+    <div class="movie-element__info">
       <h2>${title}</h2>
       <p>${rating}/5 stars</p>
     </div>
