@@ -16,7 +16,7 @@ const updateUI = () => {
   }
 };
 
-const deleteMovieHandler = (movieId) => {
+const deleteMovie = movieId => {
   let movieIndex = 0;
   for (const movie of movies) {
     if (movie.id === movieId) {
@@ -28,6 +28,12 @@ const deleteMovieHandler = (movieId) => {
   const listRoot = document.getElementById('movie-list');
   listRoot.children[movieIndex].remove();
   // listRoot.removeChild(listRoot.children[movieIndex]); //Backward compatible
+};
+
+const deleteMovieHandler = movieId => {
+  const deleteMovieModal = document.getElementById('delete-modal');
+  deleteMovieModal.classList.add('visible');
+  // deleteMovie(movieId);
 };
 
 const renderNewMovieElement = (id, title, imageUrl, rating) => {
